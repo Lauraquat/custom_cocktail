@@ -1,0 +1,215 @@
+@font-face {
+    font-family: "Inconsolata";
+    src: url("/font/static/Inconsolata/Inconsolata-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Inconsolata Bold";
+    src: url("/font/static/Inconsolata/Inconsolata-Bold.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inconsolata";
+    --bg-red: #dc182f40;
+    --red: #dc182f;
+    color: #454444;
+    overflow-x: hidden !important;
+    font-size: 1rem;
+}
+
+html {
+    background-color: #eeede3;
+}
+
+/* HEADER */
+
+header#header {
+    position: fixed;
+    top: 0;
+    background-color: #eeede3;
+    width: 100%;
+    z-index: 999;
+}
+
+nav {
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+div.container-menu {
+    margin: 0 auto;
+    max-width: 100%;
+    display: inline-block;
+    padding: 2rem;
+}
+
+/* Input caché qui permet d'ajouter l'attribut :checked en css (pour déployer le menu lorsqu'on clique sur le bouton hamburger) */
+
+input#burger {
+    display: none;
+}
+
+label.label-burger {
+    cursor: pointer;
+}
+
+div.bar1 {
+    width: 2.4rem;
+    background-color: #454444;
+    height: 0.2rem;
+    margin-bottom: 0.2rem;
+    transition: all 0.5s ease;
+}
+
+div.bar2 {
+    width: 1.2rem;
+    background-color: #454444;
+    height: 0.2rem;
+    transition: all 0.5s ease;
+}
+
+/* Quand on clique sur l'input en display:none, les 2 bars de l'icône hamburger rotate pour former une croix */
+input#burger:checked+label.label-burger div.bar1 {
+    transform: rotate(45deg);
+    margin-bottom: 0;
+}
+
+input#burger:checked+label.label-burger div.bar2 {
+    transform: translateY(-0.2rem) rotate(-45deg);
+    width: 2.4rem;
+}
+
+/* Overlay qui contient le menu en height 0 pour le cacher */
+div#overlay {
+    position: fixed;
+    width: 100%;
+    height: 0;
+    background-color: #eeede3;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 1s ease;
+}
+
+/* Overlay avec menu qui s'ouvre quand on clique sur le bouton hamburger */
+input#burger:checked+label.label-burger~div#overlay {
+    height: 100vh;
+}
+
+div.menu-links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+div.menu-links a {
+    text-decoration: none;
+    opacity: 0;
+    transition: all 0.5s ease;
+    font-size: 2rem;
+    font-family: "Inconsolata bold";
+    text-transform: uppercase;
+}
+
+input#burger:checked+label.label-burger~div#overlay div.menu-links a {
+    opacity: 1;
+    transition: all 3s ease;
+}
+
+/* BODY */
+
+/* ACCUEIL */
+
+#accueil {
+    height: 100vh;
+    display: flex;
+    width: 100%;
+}
+
+#title1 {
+    display: flex;
+    width: 100%;
+}
+
+#title1 img {
+    animation: zoom 10s ease;
+    animation-delay: -2s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        width: 100%;
+        transform: scale(1, 1);
+    }
+}
+
+#anim1 svg {
+    width: 20vh;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    right: 15vw;
+    animation: toast 2s ease;
+    transform: rotate(347deg);
+}
+
+#anim2 svg {
+    width: 20vh;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 15vw;
+    animation: toast2 2s ease;
+}
+
+#olive2 {
+    transform-origin: 49% 40%;
+    transform: rotate(299deg);
+}
+
+@keyframes toast {
+    0% {
+        top: 10%;
+        right: -40%;
+    }
+    100% {
+        top: 10%;
+        right: 15vw;
+    }
+}
+
+@keyframes toast2 {
+    0% {
+        top: 10%;
+        left: -40%;
+    }
+    100% {
+        top: 10%;
+        left: 15vw;
+    }
+}
+
+/* QUI SOMMES about ? */
+
+#about img {
+    width: 100%;
+    padding: 1rem;
+}
+
+.text-center {
+    line-height: 1.5;
+    padding: 1rem;
+}
