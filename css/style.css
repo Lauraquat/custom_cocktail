@@ -308,9 +308,15 @@ div.menu-links img {
     width: 70%;
     transform: rotate(45deg);
 }
+<<<<<<< HEAD
 
 /* MEDIA QUERIES */
 
+=======
+
+/* MEDIA QUERIES */
+
+>>>>>>> lea
 @media (min-width: 1024px) {
     div.menu-links img {
         display: block;
@@ -346,22 +352,21 @@ div.menu-links img {
         }
     }
     
-    /*ACCUEIL*/
+}   /*ACCUEIL*/
     
-    #title1 img{
-        height: 80%;
-    }    
+   #title1 img{
+    height: 80%;
+}    
 
-    #shaker svg{
-    width: 20%;
-    bottom: 20%;
-    }
-
-    #verreBar{
-        width: 20%;
-    }
-    @keyframes glisse {
-        0% {left: 100%}
-        100% {left: 10%;}
-    }
+#shaker svg{
+width: 20%;
+bottom: 20%;
 }
+
+#verreBar{
+    width: 20%;
+}
+@keyframes glisse {
+    0% {left: 100%}
+    100% {left: 10%;}
+} 
