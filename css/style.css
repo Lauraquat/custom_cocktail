@@ -17,7 +17,6 @@
     --red: #dc182f;
     color: #454444;
     overflow-x: hidden !important;
-    font-size: 1rem;
 }
 
 html {
@@ -141,20 +140,12 @@ input#burger:checked+label.label-burger~div#overlay div.menu-links a {
     width: 100%;
 }
 
-#title1 img {
-    animation: zoom 10s ease;
-    animation-delay: -2s;
+#title1 img{
+    display: flex;
+    width: 100%;
+    margin:auto;
 }
 
-@keyframes zoom {
-    from {
-        transform: scale(0, 0);
-    }
-    to {
-        width: 100%;
-        transform: scale(1, 1);
-    }
-}
 
 #anim1 svg {
     width: 20vh;
@@ -202,6 +193,83 @@ input#burger:checked+label.label-burger~div#overlay div.menu-links a {
     }
 }
 
+#shaker svg{
+    position: absolute;
+    left: -30%;
+    width: 40%;
+    bottom: 10%;
+    animation: shake 2s 2.5s, rotate 4s 3.5s, glisse1 2s 1.5s forwards;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    5% { transform: translate(-1px, -2px) rotate(-3deg); }
+    10% { transform: translate(-3px, 0px) rotate(3deg); }
+    15% { transform: translate(3px, 2px) rotate(0deg); }
+    20% { transform: translate(1px, -1px) rotate(3deg); }
+    25% { transform: translate(-1px, 2px) rotate(-3deg); }
+    30% { transform: translate(-3px, 1px) rotate(0deg); }
+    35% { transform: translate(3px, 1px) rotate(-3deg); }
+    40% { transform: translate(-1px, -1px) rotate(3deg); }
+    45% { transform: translate(1px, 2px) rotate(0deg); }
+    50% { transform: translate(1px, -2px) rotate(-3deg); }
+    55% { transform: translate(1px, 1px) rotate(0deg); }
+    60% { transform: translate(-3px, 0px) rotate(3deg); }
+    65% { transform: translate(3px, 2px) rotate(0deg); }
+    70% { transform: translate(1px, -1px) rotate(3deg); }
+    75% { transform: translate(-1px, 2px) rotate(-3deg); }
+    80% { transform: translate(-3px, 1px) rotate(0deg); }
+    85% { transform: translate(3px, 1px) rotate(-3deg); }
+    90% { transform: translate(-1px, -1px) rotate(3deg); }
+    95% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-3deg); }
+  }
+
+@keyframes rotate{
+    0%{transform: rotate(0deg);}
+    40%{transform: rotate(60deg);}
+    60%{transform: rotate(60deg);}
+    100%{transform: rotate(0deg);}
+}
+@keyframes glisse1 {
+    0% {left: -30%}
+    100% {left: 2%;}
+}
+
+#hautShaker{
+    animation: ouvre 2s 4.5s ;
+}
+@keyframes ouvre{
+    0%{transform-origin: 34% 38% ;transform: rotate(0deg);}
+    50%{transform-origin: 34% 38% ;transform: rotate(-50deg);}
+    100%{transform-origin: 34% 38% ;transform: rotate(0deg);}
+
+}
+
+#verreBar{
+    position: absolute;
+    bottom: 0%;
+    left: 100%;
+    width: 40%;
+    transform: rotate(12deg);
+    animation: glisse 3s 1.5s forwards;
+}
+
+@keyframes glisse {
+    0% {left: 100%}
+    100% {left: 15%;}
+}
+
+#liquide{
+    opacity: 0;
+    animation: remplir 2s 4.5s forwards;
+}
+@keyframes remplir{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+    ;
+}
+
 /* QUI SOMMES about ? */
 
 #about img {
@@ -212,4 +280,23 @@ input#burger:checked+label.label-burger~div#overlay div.menu-links a {
 .text-center {
     line-height: 1.5;
     padding: 1rem;
+    text-align: center;
+}
+
+/*CREATEUR D'EVENEMENT*/
+#creator {
+}
+#creator div img{
+    max-width: 100%;
+}
+
+.losange, .rond, .triangle{
+    background-color: #dc182f2b;
+    position: absolute;
+}
+.losange{
+    height: 25%;
+    width: 70%;
+    transform: rotate(45deg);
+
 }
