@@ -17,7 +17,7 @@
     --red: #dc182f;
     color: #454444;
     overflow-x: hidden !important;
-    font-size: 1rem;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -39,13 +39,17 @@ nav {
     position: relative;
     top: 0;
     width: 100%;
+    display: flex;
 }
 
 div.container-menu {
-    margin: 0 auto;
-    max-width: 100%;
-    display: inline-block;
-    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+    height: 4rem;
 }
 
 /* Input caché qui permet d'ajouter l'attribut :checked en css (pour déployer le menu lorsqu'on clique sur le bouton hamburger) */
@@ -56,24 +60,30 @@ input#burger {
 
 label.label-burger {
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
 }
 
 div.bar1 {
-    width: 2.4rem;
+    width: 2.5rem;
     background-color: #454444;
-    height: 0.2rem;
-    margin-bottom: 0.2rem;
+    height: 0.1rem;
+    margin-bottom: 0.5rem;
     transition: all 0.5s ease;
 }
 
 div.bar2 {
-    width: 1.2rem;
+    width: 1.5rem;
     background-color: #454444;
-    height: 0.2rem;
+    height: 0.1rem;
     transition: all 0.5s ease;
 }
 
 /* Quand on clique sur l'input en display:none, les 2 bars de l'icône hamburger rotate pour former une croix */
+
 input#burger:checked+label.label-burger div.bar1 {
     transform: rotate(45deg);
     margin-bottom: 0;
@@ -81,10 +91,22 @@ input#burger:checked+label.label-burger div.bar1 {
 
 input#burger:checked+label.label-burger div.bar2 {
     transform: translateY(-0.2rem) rotate(-45deg);
-    width: 2.4rem;
+    width: 2.5rem;
+}
+
+div.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.logo img {
+    height: 3rem;
 }
 
 /* Overlay qui contient le menu en height 0 pour le cacher */
+
 div#overlay {
     position: fixed;
     width: 100%;
@@ -94,14 +116,17 @@ div#overlay {
     left: 0;
     z-index: -1;
     transition: all 1s ease;
+    overflow: hidden;
 }
 
 /* Overlay avec menu qui s'ouvre quand on clique sur le bouton hamburger */
+
 input#burger:checked+label.label-burger~div#overlay {
     height: 100vh;
 }
 
 div.menu-links {
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
@@ -110,6 +135,7 @@ div.menu-links {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    overflow: hidden;
 }
 
 div.menu-links a {
@@ -119,11 +145,16 @@ div.menu-links a {
     font-size: 2rem;
     font-family: "Inconsolata bold";
     text-transform: uppercase;
+    z-index: 1;
 }
 
 input#burger:checked+label.label-burger~div#overlay div.menu-links a {
     opacity: 1;
     transition: all 3s ease;
+}
+
+div.menu-links img {
+    display: none;
 }
 
 /* BODY */
@@ -212,4 +243,42 @@ input#burger:checked+label.label-burger~div#overlay div.menu-links a {
 .text-center {
     line-height: 1.5;
     padding: 1rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1024px) {
+    div.menu-links img {
+        display: block;
+        opacity: 0;
+        position: absolute;
+        height: 50vh;
+    }
+    div.menu-links img.img-accueil {
+        top: 25%;
+        right: 25%;
+        transform: rotate3d(1, 1, 1, 90deg);
+        transition: opacity 1s ease;
+        animation: disparition3d 1s ease forwards;
+    }
+    div.menu-links a.link-accueil:hover~img.img-accueil {
+        opacity: 1;
+        animation: apparition3d 1s ease forwards;
+    }
+    @keyframes apparition3d {
+        0% {
+            transform: rotate3d(1, 1, 1, 90deg);
+        }
+        100% {
+            transform: rotate3d(1, 1, 1, 20deg);
+        }
+    }
+    @keyframes disparition3d {
+        0% {
+            transform: rotate3d(1, 1, 1, 20deg);
+        }
+        100% {
+            transform: rotate3d(1, 1, 1, 90deg);
+        }
+    }
 }
