@@ -1,12 +1,4 @@
 function closeMenu() {
-    let overlay = document.getElementById("overlay");
-    if (overlay.checked == true) {
-        overlay.style.height = "0";
-    } else {
-        overlay.style.height = "100vh";
-    }
+    let input = document.getElementById("burger");
+    input.click();
 }
-
-// function openMenu() {
-//     document.getElementById("overlay").style.height = "100vh";
-// }
