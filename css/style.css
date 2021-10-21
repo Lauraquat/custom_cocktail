@@ -164,7 +164,7 @@ div.menu-links img {
 #accueil {
     height: 100vh;
     display: flex;
-    width: 100%;
+    position: relative;
 }
 
 #title1 {
@@ -184,23 +184,9 @@ div.menu-links img {
     height: auto;
     position: absolute;
     top: 10%;
-    right: 15vw;
+    right: 10%;
     animation: toast 2s ease;
     transform: rotate(347deg);
-}
-
-#anim2 svg {
-    width: 20vh;
-    height: auto;
-    position: absolute;
-    top: 10%;
-    left: 15vw;
-    animation: toast2 2s ease;
-}
-
-#olive2 {
-    transform-origin: 49% 40%;
-    transform: rotate(299deg);
 }
 
 @keyframes toast {
@@ -210,26 +196,16 @@ div.menu-links img {
     }
     100% {
         top: 10%;
-        right: 15vw;
+        right: 10%;
     }
 }
 
-@keyframes toast2 {
-    0% {
-        top: 10%;
-        left: -40%;
-    }
-    100% {
-        top: 10%;
-        left: 15vw;
-    }
-}
 
 #shaker svg{
     position: absolute;
     left: -30%;
     width: 40%;
-    bottom: 10%;
+    bottom: 15%;
     animation: shake 2s 2.5s, rotate 4s 3.5s, glisse1 2s 1.5s forwards;
 }
 
@@ -280,7 +256,7 @@ div.menu-links img {
 
 #verreBar{
     position: absolute;
-    bottom: 0%;
+    bottom: 5%;
     left: 100%;
     width: 40%;
     transform: rotate(12deg);
@@ -296,13 +272,14 @@ div.menu-links img {
     opacity: 0;
     animation: remplir 2s 4.5s forwards;
 }
+
 @keyframes remplir{
     0%{opacity: 0;}
     100%{opacity: 1;}
     ;
 }
 
-/* QUI SOMMES about ? */
+/* QUI SOMMES ABOUT ? */
 
 #about img {
     width: 100%;
@@ -316,8 +293,7 @@ div.menu-links img {
 }
 
 /*CREATEUR D'EVENEMENT*/
-#creator {
-}
+
 #creator div img{
     max-width: 100%;
 }
@@ -326,11 +302,11 @@ div.menu-links img {
     background-color: #dc182f2b;
     position: absolute;
 }
+
 .losange{
     height: 25%;
     width: 70%;
     transform: rotate(45deg);
-
 }
 
 /* MEDIA QUERIES */
@@ -368,5 +344,24 @@ div.menu-links img {
         100% {
             transform: rotate3d(1, 1, 1, 90deg);
         }
+    }
+    
+    /*ACCUEIL*/
+    
+    #title1 img{
+        height: 80%;
+    }    
+
+    #shaker svg{
+    width: 20%;
+    bottom: 20%;
+    }
+
+    #verreBar{
+        width: 20%;
+    }
+    @keyframes glisse {
+        0% {left: 100%}
+        100% {left: 10%;}
     }
 }
