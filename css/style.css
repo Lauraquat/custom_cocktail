@@ -52,8 +52,6 @@ div.container-menu {
     height: 4rem;
 }
 
-/* Input caché qui permet d'ajouter l'attribut :checked en css (pour déployer le menu lorsqu'on clique sur le bouton hamburger) */
-
 input#burger {
     display: none;
 }
@@ -82,8 +80,6 @@ div.bar2 {
     transition: all 0.5s ease;
 }
 
-/* Quand on clique sur l'input en display:none, les 2 bars de l'icône hamburger rotate pour former une croix */
-
 input#burger:checked+label.label-burger div.bar1 {
     transform: rotate(45deg);
     margin-bottom: 0;
@@ -105,8 +101,6 @@ div.logo img {
     height: 3rem;
 }
 
-/* Overlay qui contient le menu en height 0 pour le cacher */
-
 div#overlay {
     position: fixed;
     width: 100%;
@@ -118,8 +112,6 @@ div#overlay {
     transition: all 1s ease;
     overflow: hidden;
 }
-
-/* Overlay avec menu qui s'ouvre quand on clique sur le bouton hamburger */
 
 input#burger:checked+label.label-burger~div#overlay {
     height: 100vh;
@@ -136,6 +128,7 @@ div.menu-links {
     align-items: center;
     gap: 1rem;
     overflow: hidden;
+    text-align: center;
 }
 
 div.menu-links a {
@@ -150,7 +143,7 @@ div.menu-links a {
 
 input#burger:checked+label.label-burger~div#overlay div.menu-links a {
     opacity: 1;
-    transition: all 3s ease;
+    transition: all 2s ease;
 }
 
 div.menu-links img {
@@ -161,49 +154,42 @@ div.menu-links img {
 
 /* ACCUEIL */
 
-#accueil {
+section#accueil {
+    width: 100%;
     height: 100vh;
     display: flex;
     position: relative;
 }
 
-#title1 {
+div.container-home {
+    position: relative;
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+div.title-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+div.title-main img {
+    width: 95%;
+}
+
+div.animation-shaker {
     width: 100%;
 }
 
-#title1 img {
-    display: flex;
-    width: 100%;
-    margin: auto;
-}
-
-#anim1 svg {
-    width: 20vh;
-    height: auto;
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    animation: toast 2s ease;
-    transform: rotate(347deg);
-}
-
-@keyframes toast {
-    0% {
-        top: 10%;
-        right: -40%;
-    }
-    100% {
-        top: 10%;
-        right: 10%;
-    }
-}
-
-
-#shaker svg {
+div#shaker svg {
     position: absolute;
     left: -30%;
-    width: 40%;
+    width: 30%;
     bottom: 15%;
     animation: shake 2s 2.5s, rotate 4s 3.5s, glisse1 2s 1.5s forwards;
 }
@@ -321,12 +307,12 @@ div.menu-links img {
     position: absolute;
     bottom: 5%;
     left: 100%;
-    width: 40%;
+    width: 30%;
     transform: rotate(12deg);
-    animation: glisse 3s 1.5s forwards;
+    animation: glisse2 3s 1.5s forwards;
 }
 
-@keyframes glisse {
+@keyframes glisse2 {
     0% {
         left: 100%;
     }
@@ -349,17 +335,11 @@ div.menu-links img {
     }
 }
 
-/* QUI SOMMES ABOUT ? */
+/* QUI SOMMES NOUS ? */
 
-#about img {
+section#about {
     width: 100%;
-    padding: 1rem;
-}
-
-.text-center {
-    line-height: 1.5;
-    padding: 1rem;
-    text-align: center;
+    margin: 2rem 1rem;
 }
 
 /*CREATEUR D'EVENEMENT*/
@@ -381,6 +361,46 @@ div.menu-links img {
 
 /* MEDIA QUERIES */
 
+@media (min-width: 481px) and (max-width: 767px) {
+    div.title-main img {
+        width: 85%;
+    }
+    div#shaker svg {
+        width: 25%;
+    }
+    div#verreBar {
+        width: 25%;
+    }
+    @keyframes glisse2 {
+        0% {
+            left: 100%;
+        }
+        100% {
+            left: 12%;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    div.title-main img {
+        width: 65%;
+    }
+    div#shaker svg {
+        width: 20%;
+    }
+    div#verreBar {
+        width: 20%;
+    }
+    @keyframes glisse2 {
+        0% {
+            left: 100%;
+        }
+        100% {
+            left: 12%;
+        }
+    }
+}
+
 @media (min-width: 1024px) {
     div.menu-links img {
         display: block;
@@ -388,18 +408,73 @@ div.menu-links img {
         position: absolute;
         height: 50vh;
     }
-    div.menu-links img.img-accueil {
+    div.menu-links img.img-bg-accueil {
         top: 25%;
-        right: 25%;
+        right: 5%;
         transform: rotate3d(1, 1, 1, 90deg);
         transition: opacity 1s ease;
-        animation: disparition3d 1s ease forwards;
+        animation: rightDisparition3d 1s ease forwards;
     }
-    div.menu-links a.link-accueil:hover~img.img-accueil {
+    div.menu-links a.link-accueil:hover~img.img-bg-accueil {
         opacity: 1;
-        animation: apparition3d 1s ease forwards;
+        animation: rightApparition3d 1s ease forwards;
     }
-    @keyframes apparition3d {
+    div.menu-links img.img-bg-about {
+        top: 25%;
+        left: 5%;
+        transform: rotate3d(1, 1, 1, -90deg);
+        transition: opacity 1s ease;
+        animation: leftDisparition3d 1s ease forwards;
+    }
+    div.menu-links a.link-about:hover~img.img-bg-about {
+        opacity: 1;
+        animation: leftApparition3d 1s ease forwards;
+    }
+    div.menu-links img.img-bg-evenements {
+        top: 25%;
+        right: 5%;
+        transform: rotate3d(1, 1, 1, 90deg);
+        transition: opacity 1s ease;
+        animation: rightDisparition3d 1s ease forwards;
+    }
+    div.menu-links a.link-evenements:hover~img.img-bg-evenements {
+        opacity: 1;
+        animation: rightApparition3d 1s ease forwards;
+    }
+    div.menu-links img.img-bg-temoignages {
+        top: 25%;
+        left: 5%;
+        transform: rotate3d(1, 1, 1, -90deg);
+        transition: opacity 1s ease;
+        animation: leftDisparition3d 1s ease forwards;
+    }
+    div.menu-links a.link-temoignages:hover~img.img-bg-temoignages {
+        opacity: 1;
+        animation: leftApparition3d 1s ease forwards;
+    }
+    div.menu-links img.img-bg-actualites {
+        top: 25%;
+        right: 5%;
+        transform: rotate3d(1, 1, 1, 90deg);
+        transition: opacity 1s ease;
+        animation: rightDisparition3d 1s ease forwards;
+    }
+    div.menu-links a.link-actualites:hover~img.img-bg-actualites {
+        opacity: 1;
+        animation: rightApparition3d 1s ease forwards;
+    }
+    div.menu-links img.img-bg-contact {
+        top: 25%;
+        left: 5%;
+        transform: rotate3d(1, 1, 1, -90deg);
+        transition: opacity 1s ease;
+        animation: leftDisparition3d 1s ease forwards;
+    }
+    div.menu-links a.link-contact:hover~img.img-bg-contact {
+        opacity: 1;
+        animation: leftApparition3d 1s ease forwards;
+    }
+    @keyframes rightApparition3d {
         0% {
             transform: rotate3d(1, 1, 1, 90deg);
         }
@@ -407,7 +482,7 @@ div.menu-links img {
             transform: rotate3d(1, 1, 1, 20deg);
         }
     }
-    @keyframes disparition3d {
+    @keyframes rightDisparition3d {
         0% {
             transform: rotate3d(1, 1, 1, 20deg);
         }
@@ -415,22 +490,37 @@ div.menu-links img {
             transform: rotate3d(1, 1, 1, 90deg);
         }
     }
-    
-}   /*ACCUEIL*/
-    
-   #title1 img{
-    height: 80%;
-}    
-
-#shaker svg{
-width: 20%;
-bottom: 20%;
+    @keyframes leftApparition3d {
+        0% {
+            transform: rotate3d(1, 1, 1, -90deg);
+        }
+        100% {
+            transform: rotate3d(1, 1, 1, -10deg);
+        }
+    }
+    @keyframes leftDisparition3d {
+        0% {
+            transform: rotate3d(1, 1, 1, -10deg);
+        }
+        100% {
+            transform: rotate3d(1, 1, 1, -90deg);
+        }
+    }
+    div.title-main img {
+        width: 50%;
+    }
+    div#shaker svg {
+        width: 15%;
+    }
+    div#verreBar {
+        width: 15%;
+    }
+    @keyframes glisse2 {
+        0% {
+            left: 100%;
+        }
+        100% {
+            left: 10%;
+        }
+    }
 }
-
-#verreBar{
-    width: 20%;
-}
-@keyframes glisse {
-    0% {left: 100%}
-    100% {left: 10%;}
-} 
