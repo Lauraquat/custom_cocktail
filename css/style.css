@@ -152,6 +152,10 @@ div.menu-links img {
 
 /* BODY */
 
+section {
+    margin-bottom: 10rem;
+}
+
 /* ACCUEIL */
 
 section#accueil {
@@ -170,7 +174,7 @@ div.container-home {
     gap: 2rem;
 }
 
-div.title-main {
+div.title {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -178,7 +182,7 @@ div.title-main {
     padding: 2rem;
 }
 
-div.title-main img {
+div.title img {
     width: 95%;
 }
 
@@ -359,10 +363,23 @@ section#about {
     transform: rotate(45deg);
 }
 
+/* TÉMOIGNAGES */
+
+div.guillemets {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+div.guillemets img {
+    width: 8rem;
+}
+
 /* MEDIA QUERIES */
 
 @media (min-width: 481px) and (max-width: 767px) {
-    div.title-main img {
+    div.title img {
         width: 85%;
     }
     div#shaker svg {
@@ -382,7 +399,7 @@ section#about {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    div.title-main img {
+    div.title img {
         width: 65%;
     }
     div#shaker svg {
@@ -506,7 +523,7 @@ section#about {
             transform: rotate3d(1, 1, 1, -90deg);
         }
     }
-    div.title-main img {
+    div.title img {
         width: 50%;
     }
     div#shaker svg {
