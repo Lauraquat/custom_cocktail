@@ -391,7 +391,7 @@ div#shaker svg {
 }
 
 #mojito {
-    height: 40vh;
+    width: 75%;
     display: block;
     margin: auto;
 }
@@ -478,13 +478,12 @@ footer img {
 #footer {
     display: flex;
     flex-direction: column;
-    width: 50%;
 }
 
 #logoFooter {
-    position: absolute;
-    width: 50%;
-    right: 0%;
+    width: 40%;
+    display: flex;
+    margin: auto;
 }
 
 #footer a {
@@ -498,11 +497,13 @@ footer img {
     text-decoration: underline;
     font-size: 2rem;
     padding: 1rem 1.5rem;
+    text-align: center;
 }
 
 #socialLink {
     display: flex;
     padding: 0 1.5rem 1.5rem 1.5rem;
+    justify-content: center;
 }
 
 #socialLink img {
@@ -514,6 +515,15 @@ footer img {
 footer p:last-child {
     text-align: center;
     padding: 1rem;
+}
+
+#cocktail-contact {
+    display: none;
+}
+
+#textFooter {
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -537,6 +547,173 @@ footer p:last-child {
             left: 12%;
         }
     }
+    #divider1 {
+        display: none;
+    }
+    #aboutText {
+        order: 2;
+    }
+    #about div.title,
+    #creator div.title,
+    #testimonials div.title,
+    #actu div.title,
+    #contact div.title {
+        width: 50%;
+        margin: auto;
+    }
+    #aboutContent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 3em;
+    }
+    #divider1 {
+        order: 1;
+        transform: rotate(90deg);
+    }
+    #aboutText {
+        order: 2;
+        margin: auto;
+    }
+    #divider2,
+    #divider3 {
+        display: flex;
+        margin: auto;
+    }
+    #gameContent,
+    #workshopContent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        padding: 3em;
+    }
+    .content {
+        width: 20%;
+    }
+    .losange img,
+    .triangle img,
+    .circle img {
+        position: absolute;
+        width: 18%;
+        z-index: -1;
+    }
+    #imgActu1 {
+        display: flex;
+        margin: auto;
+    }
+    div.title img {
+        width: 80%;
+    }
+    div#shaker svg {
+        width: 25%;
+    }
+    div#verreBar {
+        width: 25%;
+    }
+    @keyframes glisse2 {
+        0% {
+            left: 100%;
+        }
+        100% {
+            left: 10%;
+        }
+    }
+    #about div.title,
+    #creator div.title,
+    #testimonials div.title,
+    #actu div.title,
+    #contact div.title {
+        width: 80%;
+        margin: auto;
+    }
+    #aboutContent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 3em;
+    }
+    #divider1 {
+        order: 1;
+        transform: rotate(90deg);
+    }
+    #aboutText {
+        order: 2;
+        margin: auto;
+    }
+    #divider2,
+    #divider3 {
+        display: flex;
+        margin: auto;
+    }
+    #gameContent,
+    #workshopContent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        padding: 3em;
+    }
+    .content {
+        width: 35%;
+    }
+    .losange img,
+    .triangle img,
+    .circle img {
+        position: absolute;
+        width: 28%;
+        z-index: -1;
+    }
+    #imgActu1 {
+        display: flex;
+        margin: auto;
+    }
+    #cocktail-contact {
+        display: flex;
+        width: 10%;
+        margin: 0;
+    }
+    #contactContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #divider4 {
+        transform: rotate(90deg);
+        width: 20%;
+        margin: 0;
+    }
+    #contactText,
+    #textFooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #contentFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: end;
+        padding: 0 3em;
+    }
+    #logoFooter {
+        position: relative;
+        order: -1;
+        width: 35%;
+    }
+    #footer {
+        margin: auto;
+    }
+    #socialLink {
+        display: flex;
+        padding: 0;
+        margin: auto;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    #follow {
+        text-align: center;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -556,6 +733,117 @@ footer p:last-child {
         100% {
             left: 12%;
         }
+    }
+    div.title img {
+        width: 50%;
+    }
+    div#shaker svg {
+        width: 15%;
+    }
+    div#verreBar {
+        width: 15%;
+    }
+    @keyframes glisse2 {
+        0% {
+            left: 100%;
+        }
+        100% {
+            left: 10%;
+        }
+    }
+    #about div.title,
+    #creator div.title,
+    #testimonials div.title,
+    #actu div.title,
+    #contact div.title {
+        width: 50%;
+        margin: auto;
+    }
+    #aboutContent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 3em;
+    }
+    #divider1 {
+        order: 1;
+        transform: rotate(90deg);
+    }
+    #aboutText {
+        order: 2;
+        margin: auto;
+    }
+    #divider2,
+    #divider3 {
+        display: flex;
+        margin: auto;
+    }
+    #gameContent,
+    #workshopContent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        padding: 3em;
+    }
+    .content {
+        width: 20%;
+    }
+    .losange img,
+    .triangle img,
+    .circle img {
+        position: absolute;
+        width: 18%;
+        z-index: -1;
+    }
+    #imgActu1 {
+        display: flex;
+        margin: auto;
+    }
+    #cocktail-contact {
+        display: flex;
+        width: 10%;
+        margin: 0;
+    }
+    #contactContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #divider4 {
+        transform: rotate(90deg);
+        width: 20%;
+        margin: 0;
+    }
+    #contactText,
+    #textFooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #contentFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: end;
+    }
+    #logoFooter {
+        position: relative;
+        order: -1;
+        width: 25%;
+    }
+    #footer {
+        margin: auto;
+    }
+    #socialLink {
+        display: flex;
+        padding: 0;
+        margin: auto;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    #follow {
+        text-align: center;
     }
 }
 
@@ -668,17 +956,111 @@ footer p:last-child {
         width: 50%;
     }
     div#shaker svg {
-        width: 15%;
+        width: 12%;
     }
     div#verreBar {
-        width: 15%;
+        width: 12%;
     }
     @keyframes glisse2 {
         0% {
             left: 100%;
         }
         100% {
-            left: 10%;
+            left: 8%;
         }
+    }
+    #about div.title,
+    #creator div.title,
+    #testimonials div.title,
+    #actu div.title,
+    #contact div.title {
+        width: 50%;
+        margin: auto;
+    }
+    #aboutContent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 3em;
+    }
+    #divider1 {
+        order: 1;
+        transform: rotate(90deg);
+    }
+    #aboutText {
+        order: 2;
+        margin: auto;
+    }
+    #divider2,
+    #divider3 {
+        display: flex;
+        margin: auto;
+    }
+    #gameContent,
+    #workshopContent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        padding: 3em;
+    }
+    .content {
+        width: 20%;
+    }
+    .losange img,
+    .triangle img,
+    .circle img {
+        position: absolute;
+        width: 18%;
+        z-index: -1;
+    }
+    #imgActu1 {
+        display: flex;
+        margin: auto;
+    }
+    #cocktail-contact {
+        display: flex;
+        width: 10%;
+        margin: 0;
+    }
+    #contactContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #divider4 {
+        transform: rotate(90deg);
+        width: 20%;
+        margin: 0;
+    }
+    #contactText,
+    #textFooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #contentFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: end;
+    }
+    #logoFooter {
+        position: relative;
+        order: -1;
+        width: 25%;
+    }
+    #footer {
+        margin: auto;
+    }
+    #socialLink {
+        display: flex;
+        padding: 0;
+        margin: auto;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    #follow {
+        text-align: center;
     }
 }
