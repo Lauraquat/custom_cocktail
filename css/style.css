@@ -1042,13 +1042,14 @@ footer p:last-child {
     #contentFooter {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         text-align: end;
     }
     #logoFooter {
         position: relative;
         order: -1;
         width: 25%;
+        margin: 0;
     }
     #footer {
         margin: auto;
