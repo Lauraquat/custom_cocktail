@@ -21,23 +21,23 @@
                     <div class="bar2"></div>
                 </label>
                 <div class="logo">
-                    <a href="#accueil">
+                    <a href="#home">
                         <img src="img/logo-mobile.svg" alt="">
                     </a>
                 </div>
                 <div id="overlay">
                     <div class="menu-links">
-                        <a href="#accueil" class="link-accueil" onclick="closeMenu()">Accueil</a>
+                        <a href="#home" class="link-home" onclick="closeMenu()">Accueil</a>
                         <a href="#about" class="link-about" onclick="closeMenu()">Qui sommes-nous ?</a>
-                        <a href="#creator" class="link-evenements" onclick="closeMenu()">Événements</a>
-                        <a href="#testimonials" class="link-temoignages" onclick="closeMenu()">Témoignages</a>
-                        <a href="#actu" class="link-actualites" onclick="closeMenu()">Actualités</a>
+                        <a href="#creator" class="link-creator" onclick="closeMenu()">Événements</a>
+                        <a href="#testimonials" class="link-testimonials" onclick="closeMenu()">Témoignages</a>
+                        <a href="#actus" class="link-actus" onclick="closeMenu()">Actualités</a>
                         <a href="#contact" class="link-contact" onclick="closeMenu()">Contact</a>
-                        <img src="img/img-bg-home.jpg" alt="" class="img-bg-accueil">
+                        <img src="img/img-bg-home.jpg" alt="" class="img-bg-home">
                         <img src="img/img-bg-about.jpg" alt="" class="img-bg-about">
-                        <img src="img/img-bg-evenements.jpg" alt="" class="img-bg-evenements">
-                        <img src="img/img-bg-temoignages.jpg" alt="" class="img-bg-temoignages">
-                        <img src="img/img-bg-actualites.jpg" alt="" class="img-bg-actualites">
+                        <img src="img/img-bg-creator.jpg" alt="" class="img-bg-creator">
+                        <img src="img/img-bg-testimonials.jpg" alt="" class="img-bg-testimonials">
+                        <img src="img/img-bg-actus.jpg" alt="" class="img-bg-actus">
                         <img src="img/img-bg-contact.jpg" alt="" class="img-bg-contact">
                     </div>
                 </div>
@@ -45,13 +45,11 @@
         </nav>
     </header>
 
-    <section id="accueil">
-
+    <section id="home">
         <div class="container-home">
-            <div class="title">
-                <img src="img/title-main.svg" alt="Custom Cocktail">
+            <div class="section-title">
+                <img src="img/title-home.svg" alt="Custom Cocktail">
             </div>
-
             <div id="shaker">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                     y="0px" viewBox="0 0 375 375" style="enable-background:new 0 0 375 375;" xml:space="preserve">
@@ -294,20 +292,18 @@
                     </g>
                 </svg>
             </div>
-
         </div>
-
     </section>
 
     <section id="about">
-        <div class="title">
+        <div class="section-title">
             <img src="img/about.svg" alt="">
         </div>
         <p class="text-center">N’êtes vous pas lassé de toujours boire la même chose lors de vos apéros ?</p><br>
-        <div id="aboutContent">
-            <img src="img/divider.svg" id="divider1" alt="divider">
-            <img src="img/cockdraw.png" alt="cocktailImg" class="img-cockdraw">
-            <p id="aboutText" class="text-center">Créé en 2021 par Thomas Dhollande et basé à Lille, Custom Cocktail
+        <div id="about-container">
+            <img src="img/divider.svg" alt="divider" class="about-divider">
+            <img src="img/img-about.png" alt="cocktail">
+            <p class="text-center about-content">Créé en 2021 par Thomas Dhollande et basé à Lille, Custom Cocktail
                 vous propose d’animer vos événements d’entreprise, d’anniversaire, de mariage, etc sur le thème des
                 Cocktails (avec ou sans alcool).
                 <br> A travers des jeux, ou des ateliers créations, vous serez amenés à découvrir, reconnaître, ou créer
@@ -320,49 +316,49 @@
     </section>
 
     <section id="creator">
-        <div class="title">
-            <img src="img/titre-createur-evenement.svg" alt="">
+        <div class="section-title">
+            <img src="img/title-creator.svg" alt="Createur evenements">
         </div>
         <div id="game">
             <h2 class="text-center">Les jeux</h2>
-            <img src="img/divider.svg" id="divider2" alt="">
-            <div id="gameContent">
-                <div class="content">
+            <img src="img/divider.svg" alt="" class="game-divider">
+            <div class="game-container">
+                <div class="creator-content">
                     <div class="losange">
                         <img src="img/losange.png" alt="">
                     </div>
-                    <img src="img/fruit.png" alt="imgFruit">
+                    <img src="img/fruit.png" alt="fruit">
                     <p class="text-center">Reconnaitre les ingrédients d'un cocktail original</p>
                 </div>
-                <div class="content">
+                <div class="creator-content">
                     <div class="triangle">
                         <img src="img/triangle.png" alt="">
                     </div>
-                    <img src="img/carte-quizz.png" alt="imgQuizz">
+                    <img src="img/carte-quizz.png" alt="quizz">
                     <p class="text-center">Quizz cocktail</p>
                 </div>
-                <div class="content">
+                <div class="creator-content">
                     <div class="circle">
                         <img src="img/circle.png" alt="">
                     </div>
-                    <img id="mojito" src="img/mojito.png" alt="imgDrink">
+                    <img id="mojito" src="img/mojito.png" alt="mojito">
                     <p class="text-center">Retrouver le nom d'un cocktail connu</p>
                 </div>
             </div>
         </div>
         <div id="workshop">
             <h2 class="text-center">Les ateliers</h2>
-            <img src="img/divider.svg" id="divider3" alt="">
-            <div id="workshopContent">
-                <div class="content">
+            <img src="img/divider.svg" alt="" class="workshop-divider">
+            <div class="workshop-content">
+                <div class="creator-content">
                     <div class="circle">
                         <img src="img/circle.png" alt="">
                     </div>
-                    <img src="img/base.png" alt="imgBouteille">
+                    <img src="img/base.png" alt="base cocktail">
                     <p class="text-number">01 <br> CHOIX DE LA BASE</p>
                     <p class="text-center">(Avec ou sans alcool, nous avons de nombreux choix)</p>
                 </div>
-                <div class="content">
+                <div class="creator-content">
                     <div class="triangle">
                         <img src="img/triangle.png" alt="">
                     </div>
@@ -370,7 +366,7 @@
                     <p class="text-number">02 <br> CHOIX DES GOUTS</p>
                     <p class="text-center">(Sirop, liqueur, jus de fruit, ...)</p>
                 </div>
-                <div class="content">
+                <div class="creator-content">
                     <div class="losange">
                         <img src="img/losange.png" alt="">
                     </div>
@@ -384,7 +380,7 @@
     </section>
 
     <section id="testimonials">
-        <div class="title">
+        <div class="section-title">
             <img src="img/testimonials.svg" alt="testimonials.svg">
         </div>
         <div class="guillemets">
@@ -419,8 +415,8 @@
 
     </section>
 
-    <section id="actu">
-        <div class="title">
+    <section id="actus">
+        <div class="section-title">
             <img src="img/actu.svg" alt="actualitesImg">
         </div>
         <img src="img/MicrosoftTeams-image (3).png" id="imgActu1" alt="imageActualite">
@@ -430,11 +426,11 @@
     </section>
 
     <section id="contact">
-        <div class="title">
+        <div class="section-title">
             <img src="img/title-contact.svg" alt="contactImg">
         </div>
-        <div id="contactContent">
-            <div id="contactText">
+        <div class="contact-container">
+            <div class="contact-content">
                 <h4>ADRESSE</h4>
                 <p>96 rue Solferino 59000 Lille</p>
                 <h4>TELEPHONE</h4>
@@ -442,15 +438,15 @@
                 <h4>EMAIL</h4>
                 <p>custom-cocktail@gmail.com</p>
             </div>
-            <img src="img/divider.svg" id="divider4" alt="divider">
-            <img src="img/cocktail-contact.png" id="cocktail-contact" alt="">
+            <img src="img/divider.svg" alt="divider" class="contact-divider">
+            <img src="img/cocktail-contact.png" alt="" id="cocktail-contact">
         </div>
 
     </section>
     <footer>
         <div id="footer">
-            <div id="contentFooter">
-                <div id="textFooter">
+            <div class="footer-container">
+                <div class="footer-content">
                     <a href="#">Mentions légales</a>
                     <a href="#">Politiques de confidentialité</a>
                     <a href="#">Plan du site</a>

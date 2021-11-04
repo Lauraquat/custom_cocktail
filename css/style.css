@@ -162,7 +162,7 @@ section {
 
 /* ACCUEIL */
 
-section#accueil {
+section#home {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -178,7 +178,7 @@ div.container-home {
     gap: 2rem;
 }
 
-div.title {
+div.section-title {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -186,7 +186,7 @@ div.title {
     padding: 2rem;
 }
 
-div.title img {
+div.section-title img {
     width: 95%;
 }
 
@@ -348,7 +348,6 @@ div#shaker svg {
 
 #about {
     width: 100%;
-    background-color: #dc182f20;
 }
 
 .text-center {
@@ -360,10 +359,6 @@ div#shaker svg {
     max-width: 100%;
     padding: 1rem;
 }
-
-/* #divider1 {
-    overflow-x: hidden;
-} */
 
 /*CREATEUR D'EVENEMENT*/
 
@@ -377,7 +372,7 @@ div#shaker svg {
     max-width: 100%;
 }
 
-.content {
+.creator-content {
     height: 100%;
 }
 
@@ -420,11 +415,6 @@ div#shaker svg {
 
 /* TÉMOIGNAGES */
 
-#testimonials {
-    background-color: #dc182f20;
-    padding-bottom: 3rem;
-}
-
 div.guillemets {
     width: 100%;
     display: flex;
@@ -445,18 +435,18 @@ div.guillemets img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 1rem;
     font-family: "Inconsolata Bold";
+    padding: 0 1rem;
 }
 
 
 /*ACTUALITE*/
 
-#actu img {
+#actus img {
     max-width: 100%;
 }
 
-#actu button {
+#actus button {
     display: flex;
     margin: auto;
     padding: 1rem;
@@ -483,11 +473,6 @@ div.guillemets img {
 #contact img {
     max-width: 100%;
     margin: 2rem 0;
-}
-
-#contact,
-footer {
-    background-color: #dc182f20;
 }
 
 
@@ -547,7 +532,7 @@ footer p:last-child {
     display: none;
 }
 
-#textFooter {
+.footer-content {
     display: flex;
     flex-direction: column;
 }
@@ -556,7 +541,7 @@ footer p:last-child {
 /* MEDIA QUERIES */
 
 @media (min-width: 481px) and (max-width: 767px) {
-    div.title img {
+    div.section-title img {
         width: 85%;
     }
     div#shaker svg {
@@ -573,51 +558,48 @@ footer p:last-child {
             left: 12%;
         }
     }
-    #divider1 {
+    .about-divider {
         display: none;
     }
-    #aboutText {
+    .about-content {
         order: 2;
     }
-    #about div.title,
-    #creator div.title,
-    #testimonials div.title,
-    #actu div.title,
-    #contact div.title {
+    #about div.section-title,
+    #creator div.section-title,
+    #testimonials div.section-title,
+    #actus div.section-title,
+    #contact div.section-title {
         width: 50%;
         margin: auto;
     }
-    .guillemets {
-        margin-left: 3rem;
-    }
-    #aboutContent {
+    #about-container {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         padding: 3em;
     }
-    #divider1 {
+    .about-divider {
         order: 1;
         transform: rotate(90deg);
     }
-    #aboutText {
+    .about-content {
         order: 2;
         margin: auto;
     }
-    #divider2,
-    #divider3 {
+    .game-divider,
+    .workshop-divider {
         display: flex;
         margin: auto;
     }
-    #gameContent,
-    #workshopContent {
+    .game-container,
+    .workshop-content {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-evenly;
         padding: 3em;
     }
-    .content {
+    .creator-content {
         width: 20%;
     }
     .losange img,
@@ -631,7 +613,7 @@ footer p:last-child {
         display: flex;
         margin: auto;
     }
-    div.title img {
+    div.section-title img {
         width: 80%;
     }
     div#shaker svg {
@@ -648,35 +630,35 @@ footer p:last-child {
             left: 10%;
         }
     }
-    #about div.title,
-    #creator div.title,
-    #testimonials div.title,
-    #actu div.title,
-    #contact div.title {
+    #about div.section-title,
+    #creator div.section-title,
+    #testimonials div.section-title,
+    #actus div.section-title,
+    #contact div.section-title {
         width: 80%;
         margin: auto;
     }
-    #aboutContent {
+    #about-container {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         padding: 3em;
     }
-    #divider1 {
+    .about-divider {
         order: 1;
         transform: rotate(90deg);
     }
-    #aboutText {
+    .about-content {
         order: 2;
         margin: auto;
     }
-    #divider2,
-    #divider3 {
+    .game-divider,
+    .workshop-divider {
         display: flex;
         margin: auto;
     }
-    #gameContent,
-    #workshopContent {
+    .game-container,
+    .workshop-content {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -684,7 +666,7 @@ footer p:last-child {
         padding: 3em;
         align-items: center;
     }
-    .content {
+    .creator-content {
         width: 35%;
     }
     .losange img,
@@ -703,23 +685,23 @@ footer p:last-child {
         width: 10%;
         margin: 0;
     }
-    #contactContent {
+    .contact-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
-    #divider4 {
+    .contact-divider {
         transform: rotate(90deg);
         width: 20%;
         margin: 0;
     }
-    #contactText,
-    #textFooter {
+    .contact-content,
+    .footer-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    #contentFooter {
+    .footer-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -747,7 +729,7 @@ footer p:last-child {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    div.title img {
+    div.section-title img {
         width: 65%;
     }
     div#shaker svg {
@@ -764,7 +746,7 @@ footer p:last-child {
             left: 12%;
         }
     }
-    div.title img {
+    div.section-title img {
         width: 50%;
     }
     div#shaker svg {
@@ -781,35 +763,35 @@ footer p:last-child {
             left: 10%;
         }
     }
-    #about div.title,
-    #creator div.title,
-    #testimonials div.title,
-    #actu div.title,
-    #contact div.title {
+    #about div.section-title,
+    #creator div.section-title,
+    #testimonials div.section-title,
+    #actus div.section-title,
+    #contact div.section-title {
         width: 50%;
         margin: auto;
     }
-    #aboutContent {
+    #about-container {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         padding: 3em;
     }
-    #divider1 {
+    .about-divider {
         order: 1;
         transform: rotate(90deg);
     }
-    #aboutText {
+    .about-content {
         order: 2;
         margin: auto;
     }
-    #divider2,
-    #divider3 {
+    .game-divider,
+    .workshop-divider {
         display: flex;
         margin: auto;
     }
-    #gameContent,
-    #workshopContent {
+    .game-container,
+    .workshop-content {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -817,7 +799,7 @@ footer p:last-child {
         padding: 3em;
         align-items: center;
     }
-    .content {
+    .creator-content {
         width: 20%;
     }
     .losange img,
@@ -831,31 +813,28 @@ footer p:last-child {
         display: flex;
         margin: auto;
     }
-    .guillemets {
-        margin-left: 3rem;
-    }    
     #cocktail-contact {
         display: flex;
         width: 10%;
         margin: 0;
     }
-    #contactContent {
+    .contact-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
-    #divider4 {
+    .contact-divider {
         transform: rotate(90deg);
         width: 20%;
         margin: 0;
     }
-    #contactText,
-    #textFooter {
+    .contact-content,
+    .footer-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    #contentFooter {
+    .footer-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -888,14 +867,14 @@ footer p:last-child {
         position: absolute;
         height: 50vh;
     }
-    div.menu-links img.img-bg-accueil {
+    div.menu-links img.img-bg-home {
         top: 25%;
         right: 5%;
         transform: rotate3d(1, 1, 1, 90deg);
         transition: opacity 1s ease;
         animation: rightDisparition3d 1s ease forwards;
     }
-    div.menu-links a.link-accueil:hover~img.img-bg-accueil {
+    div.menu-links a.link-home:hover~img.img-bg-home {
         opacity: 1;
         animation: rightApparition3d 1s ease forwards;
     }
@@ -910,36 +889,36 @@ footer p:last-child {
         opacity: 1;
         animation: leftApparition3d 1s ease forwards;
     }
-    div.menu-links img.img-bg-evenements {
+    div.menu-links img.img-bg-creator {
         top: 25%;
         right: 5%;
         transform: rotate3d(1, 1, 1, 90deg);
         transition: opacity 1s ease;
         animation: rightDisparition3d 1s ease forwards;
     }
-    div.menu-links a.link-evenements:hover~img.img-bg-evenements {
+    div.menu-links a.link-creator:hover~img.img-bg-creator {
         opacity: 1;
         animation: rightApparition3d 1s ease forwards;
     }
-    div.menu-links img.img-bg-temoignages {
+    div.menu-links img.img-bg-testimonials {
         top: 25%;
         left: 5%;
         transform: rotate3d(1, 1, 1, -90deg);
         transition: opacity 1s ease;
         animation: leftDisparition3d 1s ease forwards;
     }
-    div.menu-links a.link-temoignages:hover~img.img-bg-temoignages {
+    div.menu-links a.link-testimonials:hover~img.img-bg-testimonials {
         opacity: 1;
         animation: leftApparition3d 1s ease forwards;
     }
-    div.menu-links img.img-bg-actualites {
+    div.menu-links img.img-bg-actus {
         top: 25%;
         right: 5%;
         transform: rotate3d(1, 1, 1, 90deg);
         transition: opacity 1s ease;
         animation: rightDisparition3d 1s ease forwards;
     }
-    div.menu-links a.link-actualites:hover~img.img-bg-actualites {
+    div.menu-links a.link-actus:hover~img.img-bg-actus {
         opacity: 1;
         animation: rightApparition3d 1s ease forwards;
     }
@@ -986,7 +965,7 @@ footer p:last-child {
             transform: rotate3d(1, 1, 1, -90deg);
         }
     }
-    div.title img {
+    div.section-title img {
         width: 50%;
     }
     div#shaker svg {
@@ -1003,25 +982,25 @@ footer p:last-child {
             left: 8%;
         }
     }
-    #about div.title,
-    #creator div.title,
-    #testimonials div.title,
-    #actu div.title,
-    #contact div.title {
+    #about div.section-title,
+    #creator div.section-title,
+    #testimonials div.section-title,
+    #actus div.section-title,
+    #contact div.section-title {
         width: 50%;
         margin: auto;
     }
-    #aboutContent {
+    #about-container {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         padding: 3em;
     }
-    #divider1 {
+    .about-divider {
         order: 1;
         transform: rotate(90deg);
     }
-    #aboutText {
+    .about-content {
         order: 2;
         margin: auto;
     }
@@ -1045,13 +1024,13 @@ footer p:last-child {
         width: calc((100% - 5.6rem) / 3);
     }
 
-    #divider2,
-    #divider3 {
+    .game-divider,
+    .workshop-divider {
         display: flex;
         margin: auto;
     }
-    #gameContent,
-    #workshopContent {
+    .game-container,
+    .workshop-content {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -1059,7 +1038,7 @@ footer p:last-child {
         padding: 3em;
         align-items: center;
     }
-    .content {
+    .creator-content {
         width: 20%;
     }
     .losange img,
@@ -1078,23 +1057,23 @@ footer p:last-child {
         width: 10%;
         margin: 0;
     }
-    #contactContent {
+    .contact-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
-    #divider4 {
+    .contact-divider {
         transform: rotate(90deg);
         width: 20%;
         margin: 0;
     }
-    #contactText,
-    #textFooter {
+    .contact-content,
+    .footer-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    #contentFooter {
+    .footer-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
