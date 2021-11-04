@@ -653,6 +653,7 @@ footer p:last-child {
         flex-wrap: nowrap;
         justify-content: space-evenly;
         padding: 3em;
+        align-items: center;
     }
     .content {
         width: 35%;
@@ -785,6 +786,7 @@ footer p:last-child {
         flex-wrap: nowrap;
         justify-content: space-evenly;
         padding: 3em;
+        align-items: center;
     }
     .content {
         width: 20%;
@@ -1003,6 +1005,7 @@ footer p:last-child {
         flex-wrap: nowrap;
         justify-content: space-evenly;
         padding: 3em;
+        align-items: center;
     }
     .content {
         width: 20%;
