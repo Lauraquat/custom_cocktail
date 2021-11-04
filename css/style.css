@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Inconsolata";
-    src: url("/font/static/Inconsolata/Inconsolata-Regular.ttf");
+    src: url("../font/static/Inconsolata/Inconsolata-Regular.ttf");
 }
 
 @font-face {
     font-family: "Inconsolata Bold";
-    src: url("/font/static/Inconsolata/Inconsolata-Bold.ttf");
+    src: url("../font/static/Inconsolata/Inconsolata-Bold.ttf");
 }
 
 * {
@@ -16,8 +16,8 @@
     --bg-red: #dc182f40;
     --red: #dc182f;
     color: #454444;
-    overflow-x: hidden !important;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 html {
@@ -100,7 +100,7 @@ div.logo {
 }
 
 div.logo img {
-    height: 3rem;
+    height: 2.5rem;
 }
 
 div#overlay {
@@ -156,7 +156,7 @@ div.menu-links img {
 /* BODY */
 
 section {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 
 
@@ -360,6 +360,9 @@ div#shaker svg {
     padding: 1rem;
 }
 
+/* #divider1 {
+    overflow-x: hidden;
+} */
 
 /*CREATEUR D'EVENEMENT*/
 
@@ -414,7 +417,6 @@ div#shaker svg {
     font-size: 1.2rem;
 }
 
-
 /* TÉMOIGNAGES */
 
 div.guillemets {
@@ -426,6 +428,19 @@ div.guillemets {
 
 div.guillemets img {
     width: 8rem;
+}
+
+.container-testimonials {
+    display: none;
+}
+
+.testimonials-mobile {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    font-family: "Inconsolata Bold";
 }
 
 
@@ -653,6 +668,7 @@ footer p:last-child {
         flex-wrap: nowrap;
         justify-content: space-evenly;
         padding: 3em;
+        align-items: center;
     }
     .content {
         width: 35%;
@@ -785,6 +801,7 @@ footer p:last-child {
         flex-wrap: nowrap;
         justify-content: space-evenly;
         padding: 3em;
+        align-items: center;
     }
     .content {
         width: 20%;
@@ -991,6 +1008,26 @@ footer p:last-child {
         order: 2;
         margin: auto;
     }
+
+    .testimonials-mobile {
+        display: none;
+    }
+    .container-testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+        padding: 0 2rem;
+        gap: 1rem;
+    }
+    .testimonials-divider {
+        object-fit: contain;
+        width: 0.8rem;
+    }
+    .testimonials {
+        width: calc((100% - 5.6rem) / 3);
+    }
+
     #divider2,
     #divider3 {
         display: flex;
@@ -1003,6 +1040,7 @@ footer p:last-child {
         flex-wrap: nowrap;
         justify-content: space-evenly;
         padding: 3em;
+        align-items: center;
     }
     .content {
         width: 20%;
@@ -1042,13 +1080,14 @@ footer p:last-child {
     #contentFooter {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         text-align: end;
     }
     #logoFooter {
         position: relative;
         order: -1;
         width: 25%;
+        margin: 0;
     }
     #footer {
         margin: auto;
