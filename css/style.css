@@ -169,7 +169,6 @@ button a {
 }
 
 
-
 /* ACCUEIL */
 
 section#home {
@@ -370,6 +369,7 @@ div#shaker svg {
     padding: 1rem;
 }
 
+
 /*CREATEUR D'EVENEMENT*/
 
 #game,
@@ -393,14 +393,17 @@ div#shaker svg {
     width: 100%;
 }
 
-.losange img,
-.triangle img,
-.circle img {
+.creator-content2 {
+    position: relative;
+}
+
+.losange,
+.triangle,
+.circle {
     position: absolute;
+    height: 100%;
     width: 100%;
     z-index: -1;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 #mojito {
@@ -426,6 +429,7 @@ div#shaker svg {
     margin-top: 1rem;
     font-size: 1.2rem;
 }
+
 
 /* TÉMOIGNAGES */
 
@@ -616,14 +620,14 @@ footer p:last-child {
     .creator-content {
         width: 20%;
     }
-    .losange img,
-    .triangle img,
-    .circle img {
+    .losange,
+    .triangle,
+    .circle {
         position: absolute;
-        width: 18%;
-        z-index: -1;
+        height: 100%;
         left: auto;
-    transform: translate(0);
+        overflow: hidden;
+        transform: translate(0);
     }
     #imgActu1 {
         display: flex;
@@ -685,14 +689,14 @@ footer p:last-child {
     .creator-content {
         width: 35%;
     }
-    .losange img,
-    .triangle img,
-    .circle img {
+    .losange,
+    .triangle,
+    .circle {
         position: absolute;
-        width: 28%;
-        z-index: -1;
+        height: 100%;
+        overflow: hidden;
         left: auto;
-    transform: translate(0);
+        transform: translate(0);
     }
     #imgActu1 {
         display: flex;
@@ -820,13 +824,14 @@ footer p:last-child {
     .creator-content {
         width: 20%;
     }
-    .losange img,
-    .triangle img,
-    .circle img {
+    .losange,
+    .triangle,
+    .circle {
         position: absolute;
         width: 18%;
-        z-index: -1;
+        height: 100%;
         left: auto;
+        overflow: hidden;
         transform: translate(0);
     }
     #imgActu1 {
@@ -1024,7 +1029,6 @@ footer p:last-child {
         order: 2;
         margin: auto;
     }
-
     .testimonials-mobile {
         display: none;
     }
@@ -1043,7 +1047,6 @@ footer p:last-child {
     .testimonials {
         width: calc((100% - 5.6rem) / 3);
     }
-
     .game-divider,
     .workshop-divider {
         display: flex;
@@ -1061,14 +1064,18 @@ footer p:last-child {
     .creator-content {
         width: 20%;
     }
+    .losange,
+    .triangle,
+    .circle {
+        position: absolute;
+        left: auto;
+        height: 100%;
+        transform: translate(0);
+    }
     .losange img,
     .triangle img,
     .circle img {
-        position: absolute;
-        width: 18%;
-        z-index: -1;
-        left: auto;
-        transform: translate(0);
+        overflow: auto;
     }
     #imgActu1 {
         display: flex;
