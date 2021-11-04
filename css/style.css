@@ -348,6 +348,7 @@ div#shaker svg {
 
 #about {
     width: 100%;
+    background-color: #dc182f20;
 }
 
 .text-center {
@@ -417,6 +418,10 @@ div#shaker svg {
 
 /* TÉMOIGNAGES */
 
+#testimonials {
+    background-color: #dc182f20;
+}
+
 div.guillemets {
     width: 100%;
     display: flex;
@@ -426,6 +431,15 @@ div.guillemets {
 
 div.guillemets img {
     width: 8rem;
+}
+
+.guillemets {
+    margin-left: 3em;
+}
+
+#Commentaire {
+    padding: 3em;
+    text-align: center;
 }
 
 
@@ -462,6 +476,11 @@ div.guillemets img {
 #contact img {
     max-width: 100%;
     margin: 2rem 0;
+}
+
+#contact,
+footer {
+    background-color: #dc182f20;
 }
 
 
